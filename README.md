@@ -8,6 +8,10 @@
 - 支持scss变量或者mixins全局访问
 - 支持预渲染
 
+## 关于`px2vw-loader`
+
+更多了解，查看[https://github.com/ImPigerla/px2vw-loader](https://github.com/ImPigerla/px2vw-loader)
+
 ## 如何开始
 
 ```js
