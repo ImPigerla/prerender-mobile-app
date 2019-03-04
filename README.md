@@ -20,7 +20,7 @@ npm install
 // 开发模式
 npm run dev
 
-// 生成模式
+// 生产模式
 npm run build
 ```
 
