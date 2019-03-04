@@ -1,0 +1,55 @@
+@mixin clearfix() {
+    &:before,
+    &:after {
+        content : " ";
+        display : table;
+    }
+    &:after {
+        clear : both;
+    }
+}
+
+@mixin text-overflow() {
+    overflow      : hidden;
+    text-overflow : ellipsis;
+    white-space   : nowrap;
+}
+
+@mixin transition($property: all, $duration: .4s, $timing-function: ease, $delay: 0s) {
+    transition : $property $duration $timing-function $delay;
+}
+
+@mixin utilities($step: 5,$max:5) {
+    @while $max > 0 {
+        $value : $step * $max;
+        .mt-#{$value} {
+            margin-top : $value + px;
+        }
+        .mr-#{$value} {
+            margin-right : $value + px;
+        }
+        .mb-#{$value} {
+            margin-bottom : $value + px;
+        }
+        .ml-#{$value} {
+            margin-left : $value + px;
+        }
+        $max : $max - 1;
+    }
+}
+
+@mixin font-size-scale ($level : 0) {
+    font-size: 100% + $level * 5%;
+}
+
+@mixin font-dpr {
+    //@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2) {
+    //    font-size : 105%;
+    //}
+    @media only screen and (-webkit-min-device-pixel-ratio: 3), only screen and (min-device-pixel-ratio: 3) {
+        font-size : 105%;
+    }
+    @media only screen and (-webkit-min-device-pixel-ratio: 4), only screen and (min-device-pixel-ratio: 4) {
+        font-size : 105%;
+    }
+}

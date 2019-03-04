@@ -1,0 +1,22 @@
+// reset
+@import "base/normalize";
+@import "base/utilities";
+@import "base/transitions";
+
+// component
+@import "base/table";
+
+// page-layout
+body {
+    height: 100%;
+}
+
+.page-main {
+    min-height: 100%;
+    @include font-dpr();
+    .main-container {
+        min-height: 100%;
+        width: 100%;
+        box-sizing: border-box;
+    }
+}

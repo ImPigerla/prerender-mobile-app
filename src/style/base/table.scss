@@ -1,0 +1,16 @@
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border-top: 1px solid $border-color; /* no */
+    border-bottom: 1px solid $border-color; /* no */
+    th, td {
+        padding: 8px 4px;
+        text-align: left;
+    }
+}
+
+.table-border {
+    tr {
+        border-top: 1px solid $border-color; /* no */
+    }
+}
