@@ -9,7 +9,6 @@ console.log('======================== Is production mode:', isProduct, '========
 module.exports = {
     mode: isProduct ? 'production' : 'development',
     entry: {
-        // app: ['babel-polyfill', resolve(__dirname, '../src/index.js')]
         app: resolve(__dirname, '../src/index.js')
     },
     devtool: isProduct ? 'source-map' : 'inline-source-map',
