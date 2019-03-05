@@ -2,9 +2,9 @@ let {resolve} = require('path'),
     {distPath, srcPath, publicPath, assets, limit, commonScssFile} = require('../config'),
     VueLoaderPlugin = require('vue-loader/lib/plugin'),
     MiniCssExtractPlugin = require('mini-css-extract-plugin'),
-    isProduct = process.env.NODE_ENV === 'production';
+    isProduct = process.env.NODE_ENV === 'production'
 
-console.log('======================== Is production mode:', isProduct, '========================');
+console.log('======================== Is production mode:', isProduct, '========================')
 
 module.exports = {
     mode: isProduct ? 'production' : 'development',
@@ -51,7 +51,13 @@ module.exports = {
                 use: [
                     isProduct ? MiniCssExtractPlugin.loader : 'style-loader',
                     'css-loader',
-                    '@pigerla/px2vw-loader',
+                    {
+                        loader: '@pigerla/px2vw-loader',
+                        options: {
+                            multiple: 10,
+                            outputUnit: 'rem'
+                        }
+                    },
                     'postcss-loader',
                     'sass-loader',
                     {
@@ -68,7 +74,13 @@ module.exports = {
                 use: [
                     isProduct ? MiniCssExtractPlugin.loader : 'style-loader',
                     'css-loader',
-                    '@pigerla/px2vw-loader',
+                    {
+                        loader: '@pigerla/px2vw-loader',
+                        options: {
+                            multiple: 10,
+                            outputUnit: 'rem'
+                        }
+                    },
                     'postcss-loader'
                 ]
             }, {
@@ -85,7 +97,13 @@ module.exports = {
                             }]
                         }
                     }
-                }, '@pigerla/px2vw-loader/inline-style-loader.js'],
+                }, {
+                    loader: '@pigerla/px2vw-loader/inline-style-loader.js',
+                    options: {
+                        multiple: 10,
+                        outputUnit: 'rem'
+                    }
+                }],
                 include: srcPath
             }, {
                 test: /\.js$/,

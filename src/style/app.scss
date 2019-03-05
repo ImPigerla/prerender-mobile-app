@@ -6,9 +6,15 @@
 // component
 @import "base/table";
 
+html {
+    font-size: 75px; /*no*/
+}
+
 // page-layout
 body {
     height: 100%;
+    max-width: 10rem;
+    margin: 0 auto;
 }
 
 .page-main {
