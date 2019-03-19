@@ -66,7 +66,11 @@ module.exports = webpackMerge(baseConfig, {
             staticDir: distPath,
             routes: ['/'],
             renderer: new Renderer({
-                renderAfterDocumentEvent: 'render-event'
+                renderAfterDocumentEvent: 'render-event',
+                defaultViewport: {
+                    width: 375,
+                    height: 667
+                }
             })
         })
     ]
