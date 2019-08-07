@@ -54,7 +54,6 @@ module.exports = {
                     {
                         loader: '@pigerla/px2vw-loader',
                         options: {
-                            multiple: 10,
                             outputUnit: 'rem'
                         }
                     },
@@ -77,7 +76,6 @@ module.exports = {
                     {
                         loader: '@pigerla/px2vw-loader',
                         options: {
-                            multiple: 10,
                             outputUnit: 'rem'
                         }
                     },
@@ -100,7 +98,6 @@ module.exports = {
                 }, {
                     loader: '@pigerla/px2vw-loader/inline-style-loader.js',
                     options: {
-                        multiple: 10,
                         outputUnit: 'rem'
                     }
                 }],

@@ -1,4 +1,3 @@
-import './flexible'
 import Vue from 'vue'
 import router from 'src/router'
 

@@ -6,16 +6,24 @@
 // component
 @import "base/table";
 
+// html font-size
+html {
+    font-size: (100 / 750 ) * 100vw;
+
+    @media screen and (min-width: 750px) {
+      font-size: 100px; /*no*/
+    }
+}
+
 // page-layout
 body {
     height: 100%;
-    max-width: 10rem;
+    max-width: 750px;
     margin: 0 auto;
 }
 
 .page-main {
     min-height: 100%;
-    @include font-dpr();
     .main-container {
         min-height: 100%;
         width: 100%;

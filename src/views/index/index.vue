@@ -1,21 +1,21 @@
 <template>
     <section class="index-page">
-        <img src="~images/image_1.gif" style="height: 1200px;" alt="bg">
-        <article class="text-panel">
-            <div class="text-panel-content">
-                <p class="side-text">
-                    hello world
-                </p>
+        <img src="~images/image_1.gif" style="width: 750px;" alt="test">
+        <div class="banner">
+            <div class="user-info">
+                <p class="name">{{ userName }}</p>
             </div>
-        </article>
+        </div>
     </section>
 </template>
 
-<script>
+<script type="text/javascript">
     export default {
         name: 'index.vue',
         data () {
-            return {}
+            return {
+                userName: 'padding-left: 20px; font-size: 30px;',
+            }
         }
     }
 </script>
@@ -23,25 +23,21 @@
 <style lang="scss">
     .index-page {
         position: relative;
-
-        .text-panel {
+        .banner {
             position: absolute;
-            left: 64px;
-            top: 242px;
-            right: 64px;
-            border-radius: 13px; /* no */
-            background: linear-gradient(to right, #fd57a6, #04d0fa);
-        }
-
-        .text-panel {
-            &-content {
-                margin: 3px; /* no */
-                padding: 15px;
-                background: white;
-                border-radius: 10px; /* no */
-                text-align: center;
-                font-size: 18px; /* no */
-                text-transform: uppercase;
+            z-index: 1;
+            height: 200px;
+            top: 200px;
+            left: 50%;
+            transform: translate(-50%);
+            white-space: nowrap;
+            p {
+                padding-left: 20px;
+                font-size: 30px;
+                color: #fff;
+                &:not(:first-child) {
+                    margin-top: 15px;
+                }
             }
         }
     }
