@@ -82,7 +82,6 @@ npm run build
         {
             loader: '@pigerla/px2vw-loader',
             options: {
-                multiple: 10,
                 outputUnit: 'rem'
             }
         },  // 1. 配置选项
@@ -98,7 +97,6 @@ npm run build
         {
             loader: '@pigerla/px2vw-loader',
             options: {
-                multiple: 10,
                 outputUnit: 'rem'
             }
         },  // 2. 配置选项
@@ -113,19 +111,12 @@ npm run build
         {
             loader: '@pigerla/px2vw-loader/inline-style-loader.js',
             options: {
-                multiple: 10,
                 outputUnit: 'rem'
             }
         } // 3. 配置选项
     ]
 }
 ...
-```
-
-webpack入口文件，如此项目的`index.js`文件，引入及时计算html的font-size值
-
-```js
-import './flexible'
 ```
 
 ### 2.1 最大宽度限制
@@ -135,7 +126,7 @@ import './flexible'
 ```css
 body {
     ...
-    max-width: 10rem;
+    max-width: 750px;
     margin: 0 auto;
 }
 ```
